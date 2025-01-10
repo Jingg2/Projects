@@ -1,0 +1,165 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    overflow: hidden;
+    background-image: url("img/background.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Moving Background */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/smoke.jpg");
+    z-index: -1;
+    animation: move-bg 20s linear infinite;
+}
+
+@keyframes move-bg {
+    0% {
+        transform: scale(1) translateX(0);
+    }
+    50% {
+        transform: scale(1.1) translateX(-5%);
+    }
+    100% {
+        transform: scale(1) translateX(0);
+    }
+}
+
+
+.bg-img {
+    /* The image used */
+    background-image: url("images/smoke.jpg");
+
+    /* Control the height of the image */
+    min-height: 650px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    animation: moveBackground 8s linear infinite;
+    background-size: 105% auto;
+  }
+
+/* Login Container */
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 350px;
+}
+
+/* Avatar */
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    display: block;
+    border: 3px solid #007bff; /* Blue border around avatar */
+    background: url('images/malupiton.jpg') no-repeat center center/cover;
+
+}
+.login-container h2 {
+    color: white;
+    font-size: 18px;
+}
+
+.login-container h1 {
+    color: white;
+    font-size: 25px;
+    font-weight: 700 ;
+}
+
+.login-container span {
+    color: orangered;
+}
+
+/* Error Message */
+.error {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    text-align: left;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button Style */
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue button */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #063e7a; /* Darker blue on hover */
+}
+
+.other a {
+    display: inline;
+    border-radius: 50%;
+    padding: 5px;
+    color: black;
+    background-color: white;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.other a:hover{
+    color: #063e7a;  
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 
+              0 0 20px rgba(255, 255, 255, 0.4), 
+              0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.login-container p {
+    color: white;
+}
